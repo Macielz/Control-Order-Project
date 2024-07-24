@@ -9,8 +9,10 @@ import javax.swing.JTextField;
 
 
 public class InterfaceConsulta extends JFrame{
-    
+   
+    @SuppressWarnings("unused")
     private JLabel titulo;
+    @SuppressWarnings("unused")
     private JLabel codOrdemV;
     private JTextField codOrdem;
     private JButton enviar;

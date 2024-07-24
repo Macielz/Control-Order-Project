@@ -8,10 +8,14 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 public class InterfaceMenu extends JFrame {
-
+    
+    @SuppressWarnings("unused")
     private JLabel titulo;
+    @SuppressWarnings("unused")
     private JLabel codOrdemV;
+    @SuppressWarnings("unused")
     private JLabel codOperacaoV;
+    @SuppressWarnings("unused")
     private JLabel codPessoaV;
     private JTextField codOrdem;
     private JTextField codOperacao;

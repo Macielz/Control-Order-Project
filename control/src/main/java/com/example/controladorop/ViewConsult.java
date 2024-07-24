@@ -1,5 +1,6 @@
 package com.example.controladorop;
 
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -9,33 +10,41 @@ import javax.swing.JTextField;
 
 
 public class ViewConsult extends JFrame{
-    
+    @SuppressWarnings("unused")
     private JLabel titulo;
 
+    @SuppressWarnings("unused")
     private JLabel codOrdemLabelV;
     private JLabel codOrdemLabel;
 
+    @SuppressWarnings("unused")
     private JLabel artOrdemlabelV;
     private JLabel artOrdemLabel;
 
+    @SuppressWarnings("unused")
     private JLabel nomeOrdemLabelV;
     private JLabel nomeOrdemLabel;
 
+    @SuppressWarnings("unused")
     private JLabel qtdOrdemLabelV;
     private JLabel qtdOrdemLabel;
 
+    @SuppressWarnings("unused")
     private JLabel operacaoLabelV;
+    @SuppressWarnings("unused")
     private JLabel operacaoLabel;
 
+    @SuppressWarnings("unused")
     private JLabel pessoaLabelV;
+    @SuppressWarnings("unused")
     private JLabel pessoaLabel;
 
-    //private JButton enviar;
+    private JButton enviar;
 
 
     public ViewConsult(){
         
-        setTitle("Consulta OP");
+        setTitle("Consulta OP (ViewConsult)");
         setBounds(100, 120, 600, 500);
         setLayout(null);
 
@@ -56,19 +65,33 @@ public class ViewConsult extends JFrame{
         operacaoLabelV = adicionaJLabel(180, 140, 220, 30, "Teste: ");
         operacaoLabel = adicionaJLabel(180, 165, 220, 30, "");
 
-        /*
         pessoaLabelV = adicionaJLabel(180, 160, 220, 30, "Ord");
         pessoaLabel = adicionaJLabel(180, 185, 220, 30, "");
-         
 
-        enviar = adicionaJButton(180, 260, 220, 30, "Enviar");
-        enviar.addActionListener();
 
-        */
+
+        enviar = adicionaJButton(180, 260, 220, 30, "Iniciar");
+        enviar.addActionListener(setInfo);
+
+        
         setLocationRelativeTo(null);
         setVisible(true);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
+    }
+
+ActionListener setInfo = new ActionListener() {
+    public void actionPerformed(ActionEvent e) {
+         new InterfaceSetName();
+    };
+};
+
+    public void setPessoa (String pessoa){
+        this.pessoaLabel.setText(pessoa);
+    }
+
+    public void setOperacao (String operacao ){
+        this.operacaoLabel.setText(operacao);
     }
 
     protected void setDados(String codOrdem, String artOrdem, String nomeOrdem, int qtdOrdem ){
@@ -94,12 +117,14 @@ public class ViewConsult extends JFrame{
         getContentPane().add(novaLabel);
         return novaLabel;
     }
+    @SuppressWarnings("unused")
     private JTextField adicionaJTextField(int x, int y, int w, int h) {
         JTextField novoTextField = new JTextField();
         novoTextField.setBounds(x, y, w, h);
         getContentPane().add(novoTextField);
         return novoTextField;
     }
+    @SuppressWarnings("unused")
     private JButton adicionaJButton(int x, int y, int w, int h, String texto) {
         JButton novoBotao = new JButton(texto);
         novoBotao.setBounds(x, y, w, h);
