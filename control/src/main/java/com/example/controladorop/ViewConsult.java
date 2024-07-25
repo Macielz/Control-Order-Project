@@ -41,6 +41,8 @@ public class ViewConsult extends JFrame{
 
     private JButton enviar;
 
+    private InterfaceSetName interfaceSetName;
+
 
     public ViewConsult(){
         
@@ -83,6 +85,8 @@ public class ViewConsult extends JFrame{
 ActionListener setInfo = new ActionListener() {
     public void actionPerformed(ActionEvent e) {
          new InterfaceSetName();
+        //interfaceSetName.setOrdem(codOrdemLabel.getText());
+        
     };
 };
 
